@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+Enter a number:
+<input type="number" id="txtNumber" value="20">
+<button type="button" onclick="show()">Show</button>
+      <script>
+          function kiemTraNguyenTo(number){
+              let flag = true;
+              if (number<2){
+                  flag=false;
+              }else if(number===2){
+                  flag=true;
+              }else if (number % 2 === 0){
+                  flag=false
+              } else {
+                  for(let i=3;i<number-1;i+=2){
+                      if (number%i ===0){
+                          flag=false;
+                          break;
+                      }
+                  }
+              }
+              return flag;
+          }
+
+          function show() {
+              let number=document.getElementById("txtNumber").value;
+              for (let i=0;i<number;i++){
+                  let result = kiemTraNguyenTo(i)
+                  if(result){
+                      document.write(i+" ")
+                  }
+              }
+
+          }
+
+
+      </script>
+</body>
+</html>

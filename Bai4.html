@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+     function sumMainCross(arr) {
+          let sum=0;
+         for (let i = 0; i < arr.length;i++){
+             for(let j=0;j<arr[i].length;j++){
+                 if(i==j){
+                     sum+=arr[i][j];
+                 }
+             }
+         }
+         return sum;
+     }
+     let arr1=[
+         [1,2,3,4],
+         [1,2,3,4],
+         [1,2,3,4],
+         [1,2,3,4]
+     ];
+     let arr2=[
+         [4,3,2,1],
+         [1,2,3,4],
+         [2,4,1,3],
+         [1,3,2,4]
+     ]
+    let kq1=sumMainCross(arr1);
+     let kq2=sumMainCross(arr2);
+     document.write("Tổng đường chéo chính của ma trận 1= "+kq1+"<br/>");
+     document.write("Tổng đường chéo chính của ma trận 2= "+kq2+"<br/>")
+
+</script>
+
+</body>
+</html>

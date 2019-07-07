@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function calculateAge(birthYear) {
+          let currentYear=new Date().getFullYear();
+          if(birthYear<=currentYear){
+              return currentYear-birthYear
+          }else {
+              return -1
+          }
+        }
+        let birthYear = parseInt(prompt("Nhập năm sinh: "));
+        let result= calculateAge(birthYear);
+        if(result!==-1){
+            alert(result);
+        }else {
+            alert("Không hợp lệ! ");
+        }
+    </script>
+</body>
+</html>

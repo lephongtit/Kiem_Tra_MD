@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <script>
+       let arr1=[1,2,3,4,5,6,7,8,9];
+       let arr2=[3,5,6,2,9,8,1,7,3];
+       function sumOdd(arr) {
+           let sum = 0;
+           for (let i = 0; i < arr.length; i++) {
+               let number = arr[i] % 2 !== 0;
+               if (number) {
+
+               sum += arr[i];
+           }
+           }return sum;
+       }
+       document.write("Tổng các số lẻ trong mảng 1 = "+sumOdd(arr1)+"<br/>");
+       document.write("Tổng các số lẻ trong mảng 2 = "+sumOdd(arr2));
+   </script>
+</body>
+</html>
